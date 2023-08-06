@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 450px;
+    height: 250px;
+    background: rgb(59, 55, 242);
+    background: radial-gradient(circle, rgba(59, 55, 242, 1) 14%, rgba(63, 57, 254, 1) 19%, rgba(149, 0, 145, 1) 37%, rgba(30, 39, 145, 1) 49%, rgba(0, 8, 54, 1) 71%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading_screen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.fade {
+    animation: FadeAway 400ms linear;
+}
+
+@keyframes FadeAway {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.loading>h1 {
+    font-family: 'Bungee Shade', cursive;
+    animation: Bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes Bounce {
+    to {
+        margin-top: -20px;
+    }
+}
+
+form {
+    width: min-content;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    width: min-content;
+    height: min-content;
+    margin: .325rem;
+    border: 1px solid black;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+select {
+    width: fit-content;
+}
+
+input,
+select {
+    padding: .5rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 7px;
+}
+
+:is(input, select):focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

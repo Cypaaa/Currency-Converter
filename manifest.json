@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Currency Converter",
+    "version": "1.0",
+    "author": "Cyprien",
+    "description": "Allow to convert currency with a single click.",
+    "icons": {
+        "32": "assets/icon32.png",
+        "64": "assets/icon64.png",
+        "128": "assets/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "32": "assets/icon32.png",
+            "64": "assets/icon64.png",
+            "128": "assets/icon128.png"
+        },
+        "default_title": "Click Me",
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["assets/index.js", "assets/style.css"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
